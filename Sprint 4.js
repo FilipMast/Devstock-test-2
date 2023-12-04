@@ -11,21 +11,22 @@ function sum(a, b) {
 }
 
 // 2. Napisz funkcję zwracającą długość tablicy
-const arr = [1, 2, 3, 4, 12, "string", 3, 9];
 function array(argu) {
-  return console.log(argu.length);
+  return argu.length;
 }
 
 // 3. Napisz funkcję sprawdzającą, czy liczba jest parzysta
 function evenNum(params) {
-  if (params % 2 == 0) {
-    console.log(params);
+  if (params % 2 === 0) {
+    return console.log("Liczba jest parzysta");
+  } else {
+    return console.log("liczba nie jest parzysta");
   }
 }
 
 // 4. Napisz funkcję obliczającą pole kwadratu
-function square(a, b) {
-  return Math.pow(a, b);
+function square(a) {
+  return Math.pow(a);
 }
 
 // 5. Napisz funkcję zwracającą odwrotność liczby
@@ -70,10 +71,9 @@ function absolut(params) {
 //PODSTAWY PĘTLI:
 
 // 1. Napisz funkcję, która będzie miała pętlę for, która wyświetli liczby od 1 do 10
-function loop(arr) {
-  for (let i = 0; i < 10; i++) {
-    const element = arr[i];
-    console.log(element);
+function loop() {
+  for (let i = 1; i <= 10; i++) {
+    console.log(i);
   }
 }
 
@@ -88,7 +88,8 @@ function loopWhile(params) {
 }
 
 // 3. Napisz funkcję, która użyje pętli do while do wyświetlenia liczb od 10 do 1
-function doWhile(params) {
+function doWhile() {
+  let params = 10;
   do {
     console.log(params);
     params--;
@@ -100,7 +101,7 @@ function four(params) {
   while (params < 10) {
     console.log(params);
     params++;
-    if (params == 5) {
+    if (params == 6) {
       break;
     }
   }
@@ -164,26 +165,26 @@ function exe10(params) {
 
 // 1. Napisz funkcję, która doda element na koniec tablicy używając metody push
 function ex11(arr, a) {
-  let newArray2 = arr.push(a);
-  return newArray2;
+  arr.push(a);
+  return arr;
 }
 
 // 2. Napisz funkcję, która usunie ostatni element tablicy używając metody pop
 function ex12(arr) {
-  let arrPop = arr.pop();
-  return arrPop;
+  arr.pop();
+  return arr;
 }
 
 // 3. Napisz funkcję, która usunie pierwszy element tablicy używając metody shift
 function ex13(arr) {
-  let arrShift = arr.shift();
-  return arrShift;
+  arr.shift();
+  return arr;
 }
 
 // 4. Napisz funkcję, która doda element na początek tablicy używając metody unshift
 function ex14(arr, num) {
-  let arrShift = arr.unshift(num);
-  return arrShift;
+  arr.unshift(num);
+  return arr;
 }
 
 // 5. Napisz funkcję, która użyje metody push, aby dodać dwa elementy na koniec tablicy
@@ -239,7 +240,7 @@ function ex22(arr) {
 }
 
 // 13. Napisz funkcję, która przy użyciu metody map podwoi każdy element tablicy
-function ex21(arr) {
+function ex23(arr) {
   const arr2 = arr.map((a) => a * 2);
   return arr2;
 }
